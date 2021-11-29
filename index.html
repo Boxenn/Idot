@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <input type="text" id="clicks" disabled style= text-align:center>
+    <button id="btn" type="button">idot</button> 
+    <script>
+        var click = 0;
+        document.getElementById('btn').onclick = function() {
+            click++;
+            document.getElementById('clicks').value = click;
+        }
+    </script>
+    <button><a href="#" onclick="save()">Save</a></button>
+    <button><a href="#" onclick="Load()">Load</a></button>
+
+    <script>
+function save() {
+  localStorage.setItem("click", click);
+}
+
+function Load() {
+    click = localStorage.getItem("click", click);
+}
+
+</script>
+
+</body>
+<style>
+    #btn {
+    background-color:#44c767;
+	border-radius:28px;
+	border:1px solid #18ab29;
+	display:inline-block;
+	color:#ffffff;
+	font-family: Cursive;
+	font-size:17px;
+	padding:16px 31px;
+    position: absolute;
+    left: 550px;
+    top: 225px;
+    }
+
+    #clicks {
+    position: absolute;
+    text-align:center;
+    left: 515px;
+    top: 300px;
+    }
+
+    #btn:hover {
+      background-color: red;
+    }
+</style>
+
+</html>
