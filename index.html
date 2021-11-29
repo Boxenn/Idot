@@ -11,8 +11,8 @@
             document.getElementById('clicks').value = click;
         }
     </script>
-    <button><a href="#" onclick="save()">Save</a></button>
-    <button><a href="#" onclick="Load()">Load</a></button>
+    <button id="save1"><a onclick="save()">Save</a></button>
+    <button id="load1"><a onclick="Load()">Load</a></button>
 
     <script>
 function save() {
@@ -46,6 +46,20 @@ function Load() {
     text-align:center;
     left: 515px;
     top: 300px;
+    }
+
+    #save1 {
+        position: absolute;
+        text-align: center;
+        left: 530px;
+        top: 340px;
+    }
+
+    #load1 {
+        position: absolute;
+        text-align: center;
+        left: 620px;
+        top: 340px;
     }
 
     #btn:hover {
